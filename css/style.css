@@ -242,7 +242,36 @@ footer {
 	margin-top: 50px;
 }
  
-/* Responsivo */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .form-container,
+    .map-container {
+        width: 100%; 
+    }
+}
+
 @media (max-width: 768px) {
     .sobre {
         flex-direction: column;
@@ -301,3 +330,4 @@ footer {
         margin: 10px 0;
     }
 }
+

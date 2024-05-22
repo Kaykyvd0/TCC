@@ -25,38 +25,27 @@
         <button class="menu-toggle">&#9776;</button>
     </header>
 
-    <main class="main-contact">
-        <form class="form-contact">
-            <label class="entry-label" for="name">Nome Completo</label>
-            <input class="entry" type="text" name="" id="name" required>
+    <section class="flex-container">
+        <div class="form-container">
+            <h1>Contato</h1>
+			<p>Tem alguma dúvida? Preencha o formulário abaixo</p>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-            <label class="entry-label" for="email">Email</label>
-            <input class="entry" type="email" name="" id="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label class="entry-label" for="phone">Número para contato</label>
-            <input class="entry" type="tel" name="" id="phone" required>
+                <label for="telefone">Telefone ou Celular:</label>
+                <input type="tel" id="telefone" name="telefone" required>
 
-            <label class="entry-label" for="message">Deixe aqui sua mensagem</label>
-            <textarea class="entry" name="" id="message" cols="30" rows="10"></textarea>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
-            <div class="div-entry">
-                <p class="entry-label"> Como prefere nosso contato?</p>
-                <label class="entry-label" for="email-choice"><input type="radio" name="contact-choice"
-                        id="email-choice">Email</label>
-
-                <label class="entry-label" for="whatsapp-choice" lang="en"><input type="radio" name="contact-choice"
-                        id="whatsapp-choice">Whatsapp</label>
-            </div>
-            <label class="entry-label" for="day-period">Em qual horário prefere ser atendido?</label>
-            <select class="entry" name="day-period" id="">
-                <option value="none">Selecione aqui</option>
-                <option value="morning">Manhã</option>
-                <option value="afternoon">Tarde</option>
-            </select>
-
-            <input class="entry" type="submit" value="Enviar formulário">
-        </form>
-    </main>
+                <button type="submit">Enviar</button>
+           </form>
+        </div>
+    </section>
     <script src="js/scripts.js"></script>
 </body>
 </html>
