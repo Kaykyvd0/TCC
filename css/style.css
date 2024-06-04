@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap'); /* H1 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap');  /* texto normal */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* H1 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap');  /* texto normal */
 
 body {
     font-family: Arial, sans-serif;
@@ -33,6 +33,11 @@ li, a, button {
     width: 7%;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
 
 .nav_links {
     list-style: none;
@@ -49,6 +54,7 @@ li, a, button {
 
 .nav_links li a {
     transition: all 0.3s ease 0s;
+    text-decoration: none;
 }
 
 .nav_links li a:hover {
@@ -69,21 +75,32 @@ li, a, button {
 }
 
 .adm-button {
-    padding: 9px 25px;
+    padding: 10px 40px;
     background-color: #f68c36;
     border: none;
     border-radius: 50px;
     cursor: pointer; 
     transition: all 0.3s ease 0s;
+    text-decoration: none;
 }
 
 .adm-button:hover {
     background-color: #ea3b00;
 }
 
-.header-buttons {
-    display: flex;
-    gap: 40px;
+.botao-enviar {
+    padding: 9px 25px;
+    background-color: #28a745; 
+    color: #fff; 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; 
+    transition: all 0.3s ease 0s;
+    text-decoration: none; 
+}
+
+.botao-enviar:hover {
+    background-color: #218838; 
 }
 
 .menu-toggle {
@@ -105,9 +122,9 @@ main {
 
 .intro h1 {
     font-size: 3em;
-    color: #b7472a;
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 300;
+    color: #db512f;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -163,12 +180,11 @@ main {
     width: 1000px;
     margin: 0 auto;
     font-size: 20px;
-
 }
 
 .form-contact {
     margin: 40px 0;
- }
+}
 
 .entry-label {
     display: block;
@@ -202,30 +218,30 @@ main {
     padding: 50px 20px;
     background-color: #fff;
 }
- 
+
 .sobre-imagem {
     flex: 1;
     text-align: center;
 }
- 
+
 .sobre-imagem img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
- 
+
 .sobre-texto {
     flex: 2;
     padding-left: 20px;
 }
- 
+
 .sobre-texto h2 {
     font-size: 2.5em;
     color: #b7472a;
     font-family: "Poetsen One", sans-serif;
     font-weight: 300;
 }
- 
+
 .sobre-texto p {
     line-height: 1.6;
     color: #333;
@@ -235,13 +251,13 @@ main {
 }
 
 footer {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
-	margin-top: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
 }
- 
+
 form {
     display: flex;
     flex-direction: column;
@@ -277,7 +293,7 @@ textarea {
         flex-direction: column;
         text-align: center;
     }
- 
+
     .sobre-texto {
         padding-left: 0;
     }
@@ -330,4 +346,3 @@ textarea {
         margin: 10px 0;
     }
 }
-
