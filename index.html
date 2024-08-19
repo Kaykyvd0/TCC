@@ -13,20 +13,17 @@
         <img class="logo" src="img/logo.png" alt="logo">
         <nav class="nav-container">
             <ul class="nav_links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre nós</a></li>
-                <li><a href="orcamento.html">Orçamentos</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
-                <li><a href="#" class="adm-button">ADM</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#orcamento">Orçamentos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
             </ul>
         </nav>
         <button class="menu-toggle">&#9776;</button>
     </header>
     
-    
-
     <main>
-        <section class="intro">
+        <section id="inicio" class="intro">
             <h1>Fox Soluções: Segurança ao seu patrimônio</h1>
             <p>
                 Criada em 2015 no Parque São Bento, Sorocaba, a Fox Soluções é fruto da determinação de Fernando Martins. 
@@ -37,20 +34,61 @@
                 Junte-se a nós nessa busca por um trabalho melhor, mais humano e mais eficaz.
             </p>
 
+            <!-- Cards da Seção Início -->
+            <section class="services">
+                <div class="service-card">
+                    <img src="img/gabiel.jpg" alt="Nossos serviços">
+                    <h3>Nossos serviços</h3>
+                </div>
+                <div class="service-card">
+                    <img src="img/gabiel2.jpg" alt="Nossos serviços">
+                    <h3>Nossos serviços</h3>
+                </div>
+                <div class="service-card">
+                    <img src="img/motor.jpg" alt="Nossos serviços">
+                    <h3>Nossos equipamentos</h3>
+                </div>
+            </section>
         </section>
 
-        <section class="services">
-            <div class="service-card">
-                <img src="img/gabiel.jpg" alt="Nossos serviços">
-                <h3>Nossos serviços</h3>
+        <section id="sobre" class="sobre">
+            <div class="sobre-imagem">
+                <img src="img/logo.png" alt="Foto de um membro da equipe">
             </div>
-            <div class="service-card">
-                <img src="img/gabiel2.jpg" alt="Nossos serviços">
-                <h3>Nossos serviços</h3>
+            <div class="sobre-texto">
+                <h2>Sobre a Fox Soluções</h2>
+                <p>
+                    A Fox Soluções surgiu em 2015, no Parque São Bento - Sorocaba, após o dono Fernando Martins ter encerrado seu antigo contrato de trabalho, o qual ele era produtor do material.  
+                    Ele formou sua empresa após uma indignação pessoal por melhores condições de trabalho como segurança, higiene ergonomia e qualidade em seus serviços.
+                    Podemos concluir que, a Fox Soluções teve seu nascimento pela necessidade de uma empresa melhorada. Tanto em suas condições de necessidade humana básica quanto em efetividade do trabalho. 
+                </p>
             </div>
-            <div class="service-card">
-                <img src="img/motor.jpg" alt="Nossos serviços">
-                <h3>Nossos equipamentos</h3>
+        </section>
+
+        <section id="orcamento" class="orcamento" style="text-align: center; padding: 50px 0;">
+            <h2 style="font-size: 2em; margin-bottom: 20px;">Orçamentos</h2>
+            <p style="font-size: 1.2em; margin: 0 auto;">Fora de serviço</p>
+        </section>
+        
+        <section id="contatos" class="flex-container">
+            <div class="form-container">
+                <h1>Contato</h1>
+                <p>Tem alguma dúvida? Preencha o formulário abaixo</p>
+                <form action="#" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefone">Telefone ou Celular:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button class="botao-enviar">Enviar</button>
+                </form>
             </div>
         </section>
     </main>
@@ -62,6 +100,5 @@
     </footer>
 
     <script src="js/scripts.js"></script>
-
 </body>
 </html>
