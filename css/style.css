@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* H1 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 body {
     font-family: Arial, sans-serif;
@@ -8,8 +6,6 @@ body {
 }
 
 header {
-    position: fixed; /* Mantém o header fixo no topo */
-    top: 0; /* Posiciona o header na parte superior */
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
     display: flex;
@@ -22,28 +18,26 @@ header {
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 23px;
     color: #000000c5;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
     font-style: normal;
 }
+
 h1 {
     text-align: center; 
-    font-size: 30px; /* Tamanho da fonte */
-    color: #121212; /* Cor do texto */
-    margin-top: 50px; /* Espaço acima do título */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-    font-family: "Poppins", sans-serif; /* Fonte específica */
+    font-size: 30px;
+    color: #121212;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
 .logo {
     cursor: pointer;
-    width: 11%;
+    width: 8%;
 }
 
 .nav-container {
@@ -62,12 +56,12 @@ h1 {
 
 .nav_links li {
     display: inline-block;
-    padding: 0 10px; /* Reduzimos o padding para diminuir o espaçamento entre os itens */
+    padding: 0 10px;
 }
 
 .nav_links li a {
-    font-size: 40px; /* Aumenta o tamanho da fonte para que as opções fiquem maiores */
-    padding: 10px 15px; /* Adiciona padding para aumentar a área de clique e dar a sensação de ser maior */
+    font-size: 33px;
+    padding: 10px 15px;
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
@@ -76,7 +70,30 @@ h1 {
     color: #fd9320;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%; 
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.back-to-top:hover {
+    background-color: darkorange;
+}
 
 .botao-enviar {
     padding: 9px 25px;
@@ -113,14 +130,14 @@ main {
 .intro-title {
     text-align: center;
     color: #db512f;
-    font-size: 5em; /* Tamanho maior para o título principal */
+    font-size: 5em;
     margin-bottom: 10px;
 }
 
 .intro-subtitle  {
     text-align: center;
-    font-size: 1.5em; /* Tamanho menor para o subtítulo */
-    color: #060606; /* Cor mais suave para o subtítulo */
+    font-size: 1.5em;
+    color: #060606;
     margin-bottom: 20px;
 }
 
@@ -130,27 +147,17 @@ main {
     line-height: 1.6;
     color: #2d2c2c;
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
-
-.services {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-
 
 .slideshow-container {
     max-width: 600px;
     position: relative;
     margin: auto;
-  }
-  
+}
 
-  .text {
+.text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -158,17 +165,17 @@ main {
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  .numbertext {
+}
+
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  .dot {
+}
+
+.dot {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -176,51 +183,16 @@ main {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active {
+}
+
+.active {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Animação de fade */
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-
-  .main-contact {
-    width: 1000px;
-    margin: 0 auto;
-    font-size: 20px;
-}
-
-.form-contact {
-    margin: 40px 0;
-}
-
-.entry-label {
-    display: block;
-    margin: 8px auto;
-    width: 50%;
-}
-
-.entry, .form-contact textarea {
-    display: block;
-    margin: 0 auto 25px;
-    padding: 4px 9px;
-    font-size: 18px;
-    width: 50%;
-    box-sizing: border-box;
-    resize: none;
-    overflow: auto;
-}
-
-#checkbox, .div-entry {
-    margin: 30px auto;
-}
-
-.service-card button:hover {
-    background-color: #a63e24;
 }
 
 .sobre {
@@ -228,7 +200,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
-    background-color: #9d9d9d;
+    background-color: rgba(157, 157, 157, 0.2);
     margin-top: 50px;
 }
 
@@ -254,6 +226,7 @@ main {
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
+
 .sobre-texto p {
     line-height: 1.6;
     color: #333;
@@ -292,38 +265,29 @@ textarea {
     align-items: flex-start;
     flex-wrap: wrap;
 }
-  
-  @keyframes fade {
+
+@keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
+}
 
+/* Estilo responsivo */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
 
 @media (max-width: 768px) {
     .form-container,
     .map-container {
         width: 100%; 
     }
-}
-
-@media (max-width: 768px) {
     .sobre {
         flex-direction: column;
         text-align: center;
     }
-
     .sobre-texto {
         padding-left: 0;
     }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
     .nav_links {
         display: none;
         flex-direction: column;
@@ -335,25 +299,17 @@ textarea {
         left: 0;
         border-top: 1px solid #ddd;
     }
-
     .nav_links.active {
         display: flex;
     }
-
     .nav_links li {
         display: block;
         padding: 10px 0;
     }
-
     .nav_links li a {
         padding: 10px 0;
         font-size: 18px;
     }
-
-    .header-buttons {
-        display: none;
-    }
-
     .menu-toggle {
         display: block;
     }
@@ -363,10 +319,8 @@ textarea {
     .intro h1 {
         font-size: 1.5em;
     }
-
     .service-card {
         width: 100%;
         margin: 10px 0;
     }
 }
-
