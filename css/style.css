@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Fundo mais claro */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1ddcc; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #2d2c2c;
+    color: #0e0907; 
 }
 
 header {
-    background-color: #db512f; /* Cor de fundo do cabeçalho */
-    border-bottom: 2px solid #ddd;
+    background-color: rgba(221, 120, 28, 0.8);
+    border-bottom: 2px solid #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 8px;
     position: relative;
     z-index: 1000;
 }
@@ -29,17 +31,16 @@ li, a, button {
 h1 {
     text-align: center; 
     font-size: 30px;
-    color: #121212;
+    color: #0e0907; /* Preto profundo */
     margin-top: 50px;
     margin-bottom: 30px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Lora', serif;
     font-weight: 600;
-    font-style: normal;
 }
 
 .logo {
     cursor: pointer;
-    width: 8%;
+    width: 6%;
 }
 
 .nav-container {
@@ -62,14 +63,14 @@ h1 {
 }
 
 .nav_links li a {
-    font-size: 33px;
+    font-size: 24px;
     padding: 10px 15px;
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
 
 .nav_links li a:hover {
-    color: #fd9320;
+    color: #dd781c; /* Laranja escuro */color: #fd9320;
 }
 
 .back-to-top {
@@ -98,18 +99,17 @@ h1 {
 }
 
 .botao-enviar {
-    padding: 9px 25px;
-    background-color: #28a745; 
-    color: #fff; 
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 50px;
-    cursor: pointer; 
-    transition: all 0.3s ease 0s;
-    text-decoration: none; 
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .botao-enviar:hover {
-    background-color: #218838; 
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 .menu-toggle {
@@ -125,7 +125,7 @@ main {
 }
 
 .intro {
-    background: linear-gradient(135deg, #db512f 0%, #fd9320 100%); /* Gradiente de fundo */
+	background-color: #f69f4f; /* Cor de fundo laranja claro */
     color: white;
     padding: 50px 20px;
     margin-bottom: 40px;
@@ -138,22 +138,26 @@ main {
 
 .intro-title {
     font-size: 5em;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduzido para diminuir o espaço */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
 }
 
 .intro-subtitle {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-top: 0; /* Remove a margem superior */
+    margin-bottom: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }
 
 .intro p {
     max-width: 970px;
     margin: 0 auto 20px auto;
     line-height: 1.6;
-    color: #2d2c2c;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    color: #0e0907; /* Preto profundo */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     text-align: justify;
 }
 
@@ -247,45 +251,53 @@ main {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+    gap: 30px; /* Aumenta o espaço entre os cards */
+    padding: 30px; /* Aumenta o padding ao redor do grid */
 }
 
+/* Estilos para os cards de serviço */
 .service-card {
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     text-align: center;
-    padding: 10px; /* Adicionado para dar espaçamento ao redor dos elementos internos */
+    padding: 15px; /* Aumenta o espaçamento interno do card */
+    max-width: 500px; /* Aumenta a largura máxima dos cards */
+    margin: auto; /* Centraliza os cards */
 }
 
+/* Estilos para as imagens dos cards de serviço */
 .service-card img {
-    width: 75%; /* Define a largura da imagem como 75% do card */
-    height: auto;
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    max-width: 450px; /* Define uma largura máxima maior para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
     display: block;
-    margin: 0 auto 10px auto; /* Centraliza a imagem e adiciona margem inferior */
+    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona margem inferior */
     border-bottom: 1px solid #ccc;
     border-radius: 8px;
 }
 
+/* Estilos para o conteúdo dos cards de serviço */
 .service-content {
-    padding: 10px;
+    padding: 15px;
 }
 
+/* Estilos para o título dos cards de serviço */
 .service-content h2 {
-    font-size: 24px;
+    font-size: 28px; /* Aumenta o tamanho da fonte do título */
     color: #2d2c2c;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilos para o parágrafo dos cards de serviço */
 .service-content p {
-    font-size: 16px;
+    font-size: 18px; /* Aumenta o tamanho da fonte do parágrafo */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -305,6 +317,41 @@ main {
     height: auto;
     display: block;
     border-radius: 8px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para o contêiner arredondado */
+.rounded-container {
+    background-color: #fff; /* Fundo branco para o contêiner */
+    padding: 30px;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilos para os elementos do formulário */
+.form-container form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container form input,
+.form-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
 
