@@ -115,9 +115,17 @@ h1 {
 .menu-toggle {
     display: none;
     cursor: pointer;
-    font-size: 30px;
-    background: none;
+    font-size: 20px;
+    background-color: #db512f; /* Cor de fundo do botão */
+    color: white; /* Cor do ícone (ou texto) do botão */
     border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #fd9320; /* Cor ao passar o mouse */
 }
 
 main {
@@ -208,54 +216,59 @@ main {
 .sobre {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px 10px;
-    background-color: #d9d9d9; /* Fundo branco */
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #d9d9d9;
     margin-top: 50px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
 }
 
 .sobre-imagem {
     flex: 1;
-    text-align: center;
-    box-shadow: 0 -100px 100px rgba(0, 0, 0, 0.1); /* Sombra apenas nos lados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .sobre-imagem img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border-radius: 9px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), /* Sombra lateral direita e inferior */
+                -5px -5px 15px rgba(0, 0, 0, 0.2); /* Sombra lateral esquerda e superior */
+}
+
+.sobre-imagem img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 .sobre-texto {
     flex: 2;
-    padding-left: 20px;
-	margin-top: -180px; /* Ajuste o valor conforme necessário */
+    padding-left: 40px;
+    text-align: justify;
 }
 
 .sobre-texto h2 {
     font-size: 2.5em;
-    color: #FFF; /* Cor do texto */
+    color: #FFF;
     font-family: "Poppins", sans-serif;
-    font-style: normal;
-    border: 3px solid #000000; /* Borda preta */
-    padding: 10px 20px; /* Espaço interno entre o texto e a borda */
-	width: 98%; /* Define a largura do retângulo (ajuste conforme necessário) */
-    margin: 0; /* Remove margens externas */
-	margin-left: -20px; /* Puxa o retângulo 20px para a esquerda */
-    background-color: #000000; /* Cor de fundo dentro do retângulo (exemplo) */
-    border-radius: 8px; /* Bordas arredondadas (opcional) */
+    font-weight: 600;
+    border: 3px solid #000;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    background-color: #000;
+    border-radius: 8px;
 }
 
 .sobre-texto p {
+    font-size: 1.2em;
     line-height: 1.6;
     color: #333;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-align: justify; /* Justificar texto */
+    font-weight: 500;
 }
 
 .service-grid {
@@ -426,15 +439,28 @@ textarea {
         flex-direction: column;
         text-align: center;
     }
+
+    .sobre-imagem {
+        margin-bottom: 20px;
+    }
+
     .sobre-texto {
         padding-left: 0;
+    }
+
+    .sobre-texto h2 {
+        font-size: 2em;
+    }
+
+    .sobre-texto p {
+        font-size: 1em;
     }
     .nav_links {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #f8f8f8;
+        background-color: #0e0907;
         position: absolute;
         top: 60px;
         left: 0;
