@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff; 
+    background-color: #fffafa; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -29,12 +29,13 @@ li, a, button {
 
 h1 {
     text-align: center; 
-    font-size: 30px;
+    font-size: 40px;
     color: #0e0907; /* Preto profundo */
     margin-top: 50px;
     margin-bottom: 30px;
-    font-family: 'Lora', serif;
-    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .logo {
@@ -272,6 +273,7 @@ main {
     grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
     gap: 30px; /* Aumenta o espaço entre os cards */
     padding: 30px; /* Aumenta o padding ao redor do grid */
+	
 }
 
 /* Estilos para os cards de serviço */
@@ -279,24 +281,28 @@ main {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    padding: 15px; /* Aumenta o espaçamento interno do card */
-    max-width: 500px; /* Aumenta a largura máxima dos cards */
+    padding: 10px; /* Mantendo o espaçamento interno do card */
+    width: 450px; /* Aumentando a largura dos cards */
+    height: 300px; /* Altura fixa para os cards */
     margin: auto; /* Centraliza os cards */
 }
 
 /* Estilos para as imagens dos cards de serviço */
 .service-card img {
     width: 100%; /* Imagem ocupa toda a largura do card */
-    max-width: 450px; /* Define uma largura máxima maior para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Mantém a proporção e cobre a área definida */
     display: block;
-    margin: 0 auto 15px auto; /* Centraliza a imagem e adiciona margem inferior */
+    margin: 0 auto 10px auto; /* Centraliza a imagem e ajusta a margem inferior */
     border-bottom: 1px solid #ccc;
     border-radius: 8px;
 }
+
+
+
 
 /* Estilos para o conteúdo dos cards de serviço */
 .service-content {
@@ -497,140 +503,62 @@ textarea {
 
 
 /* css slider */
-.slider{
-    height: 100vh;
-    margin-top: -50px;
+.carousel {
     position: relative;
-}
-.slider .list .item{
-    position: absolute;
-    inset: 0 0 0 0;
+    width: 495px; /* Largura do carrossel */
     overflow: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-.slider .list .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.slider .list .item::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        to top, #000 40%, transparent
-    );
-}
-.slider .list .item .content{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width: 500px;
-    max-width: 80%;
-    z-index: 1;
-}
-.slider .list .item .content p:nth-child(1){
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-.slider .list .item .content h2{
-    font-size: 100px;
-    margin: 0;
-}
-.slider .list .item.active{
-    opacity: 1;
-    z-index: 10;
-}
-@keyframes showContent {
-    to{
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-.slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3){
-    transform: translateY(30px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent .5s .7s ease-in-out 1 forwards;
-}
-.slider .list .item.active h2{
-    animation-delay: 1s;
-}
-.slider .list .item.active p:nth-child(3){
-    animation-duration: 1.3s;
-}
-.arrows{
-    position: absolute;
-    top: 30%;
-    right: 50px;
-    z-index: 100;
-}
-.arrows button{
-    background-color: #eee5;
-    border: none;
-    font-family: monospace;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    font-size: x-large;
-    color: #eee;
-    transition: .5s;
-}
-.arrows button:hover{
-    background-color: #eee;
-    color: black;
-}
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    z-index: 11;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    height: 250px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    overflow: auto;
-    justify-content: center;
-}
-.thumbnail::-webkit-scrollbar{
-    width: 0;
-}
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    filter: brightness(.5);
-    transition: .5s;
-    flex-shrink: 0;
-}
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
-.thumbnail .item.active{
-    filter: brightness(1.5);
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
 }
-.thumbnail .item .content{
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-img {
+    width: 495px; /* Largura fixa */
+    height: 974px; /* Altura fixa */
+    border-radius: 10px;
+    display: block;
+}
+
+/* Estilos para o botão */
+.carousel-button {
     position: absolute;
-    inset: auto 10px 10px 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px; /* Ajustando o padding para texto maior */
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
 }
-@media screen and (max-width: 678px) {
-    .thumbnail{
-        justify-content: start;
-    }
-    .slider .list .item .content h2{
-        font-size: 60px;
-    }
-    .arrows{
-        top: 10%;
-    }
+
+.carousel-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+    transform: translateY(-4px); /* Efeito de elevação */
+}
+
+.carousel-button:focus {
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo específico para o botão "prev" e "next" */
+.prev {
+    left: 20px; /* Distância da borda esquerda */
+}
+
+.next {
+    right: 20px; /* Distância da borda direita */
 }
