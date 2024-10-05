@@ -284,27 +284,23 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    padding: 10px; /* Mantendo o espaçamento interno do card */
-    width: 450px; /* Aumentando a largura dos cards */
-    height: 300px; /* Altura fixa para os cards */
-    margin: auto; /* Centraliza os cards */
+    padding: 10px;
+    width: 450px; /* Mantém a largura */
+    height: auto; /* Removemos a altura fixa */
+    margin: auto;
 }
 
-/* Estilos para as imagens dos cards de serviço */
+/* Ajuste nas imagens dos cards */
 .service-card img {
-    width: 100%; /* Imagem ocupa toda a largura do card */
-    height: 200px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Mantém a proporção e cobre a área definida */
+    width: 100%;
+    height: auto; /* Permitir que a imagem ajuste conforme seu conteúdo */
+    max-height: 200px; /* Limitar a altura máxima para evitar desproporção */
+    object-fit: cover; /* Ajuste para cobrir o espaço do card sem distorcer */
     display: block;
-    margin: 0 auto 10px auto; /* Centraliza a imagem e ajusta a margem inferior */
-    border-bottom: 1px solid #ccc;
-    border-radius: 8px;
+    margin: 0 auto;
 }
 
-
-
-
-/* Estilos para o conteúdo dos cards de serviço */
+/* Conteúdo dos cards */
 .service-content {
     padding: 15px;
 }
@@ -397,6 +393,25 @@ footer {
     text-align: center;
     margin-top: 50px;
 }
+
+.whatsapp-button {
+    width: 50px;  /* ajuste conforme necessário */
+    height: 50px; /* ajuste conforme necessário */
+    position: fixed;
+    bottom: 80px;  /* para manter o espaço acima do botão de subir ao topo */
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e; /* Cor mais escura ao passar o mouse */
+}
+
 
 form {
     display: flex;
